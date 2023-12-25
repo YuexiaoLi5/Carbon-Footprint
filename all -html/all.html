@@ -1,0 +1,121 @@
+<html lang="zh-CN">
+<head>
+    <!-- 设置文档字符集和视口 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 设置网页标题 -->
+    <title>首页</title>
+    
+    <!-- 样式部分：网页的外观和布局 -->
+    <style>
+        body {
+            font-family: '宋体', 'SimSun', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+        }
+        .navbar button {
+            font-family: '宋体', 'SimSun', sans-serif;
+            padding: 15px 25px;
+            background: #426B1F; /* 渐变背景色 */
+            color: white;
+            border: none;
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            transition: background 0.3s ease; /* 添加过渡效果 */
+            font-weight: bold; /* 加粗效果 */
+        }
+        .navbar button:hover {
+            background: linear-gradient(to right, #426B1F, #E0F0D7);
+        }
+
+        /* 主要内容区域样式 */
+        .main-content {
+            text-align: center;
+            padding: 80px;
+        }
+        .main-content h2 {
+            font-family: 'Times New Roman', Times, serif; /* 设置 Carbon Footprint 字体为 Times New Roman，Times 为备用字体，serif 为通用衬线字体 */
+            font-size: 4.25em;
+            margin: 50px;
+        }
+        .main-content button {
+            font-family: '宋体', 'SimSun', sans-serif;
+            font-size: 1.5em;
+            padding: 20px 80px;
+            margin-top: 80px; /* 调整按钮与上方内容的间距 */
+            background: #426B1F;
+            color: white;
+            border: none;
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            transition: background 0.3s ease; /* 添加过渡效果 */
+            font-weight: bold; /* 加粗效果 */
+        }
+        .main-content button:hover {
+            background: linear-gradient(to right, #426B1F, #E0F0D7);
+        }
+        .main-content button {
+            font-family: '宋体', 'SimSun', sans-serif;
+            font-size: 1.5em;
+            padding: 20px 80px;
+            margin-top: 80px; /* 调整按钮与上方内容的间距 */
+            background: #426B1F;
+            color: white;
+            border: none;
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            transition: background 0.3s ease; /* 添加过渡效果 */
+            font-weight: bold; /* 加粗效果 */
+        }
+        .main-content button:hover {
+            background: linear-gradient(to right, #426B1F, #E0F0D7);
+        }
+
+        .bottom-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 40px; /* 调整图片与上方内容的间距 */
+        }
+
+        a {
+            text-decoration: none; /* 去除下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+            font-size: inherit; /* 继承父元素的字体大小 */
+            font-family: inherit; /* 继承父元素的字体族 */
+            /* 可以添加其他样式，以确保链接的样式一致 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏部分 -->
+    <div class="navbar">
+        <h1><a href="0.html">Carbon Footprint</a></h1>
+        <button><a href="1.html">首页</a></button>
+    </div>
+
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+        <h2>Do you know how big your campus carbon footprint is?</h2>
+        <button><a href="index.html">管理员登录</a></button>
+        <button><a href="index1.html">普通用户登录</a></button>
+    </div>
+
+    <!-- 底部图片 -->
+    <img class="bottom-image" src=".\pic1.png" alt="描述图片的文字">
+</body>
+</html>

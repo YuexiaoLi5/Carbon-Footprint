@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       body {
+            font-family: '宋体', 'SimSun', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+        }
+        .navbar button {
+            font-family: '宋体', 'SimSun', sans-serif;
+            padding: 15px 25px;
+            background: #426B1F; /* 渐变背景色 */
+            color: white;
+            border: none;
+            border-radius: 5px; /* 圆角 */
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            transition: background 0.3s ease; /* 添加过渡效果 */
+            font-weight: bold; /* 加粗效果 */
+        }
+        .navbar button:hover {
+            background: linear-gradient(to right, #426B1F, #E0F0D7);
+        }
+        
+        h1, h2, h3, h4 {
+            color: #333;
+            margin-left: 40px; /* 页面左侧的距离 */
+            margin-right: 40px; /* 页面右侧的距离 */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-left: 40px; /* 页面左侧的距离 */
+            margin-right: 40px; /* 页面右侧的距离 */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        input[type=text], input[type=number] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-left: 40px; /* 页面左侧的距离 */
+            margin-right: 40px; /* 页面右侧的距离 */
+        }
+
+        #checkAuthorizationStatusOutput, #addActivityOutput, #recordActivityOutput, #emissionsOutput, #rewardAmountOutput, #userEmissionOutput, #allUsersOutput {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #fff;
+            margin-left: 40px; /* 页面左侧的距离 */
+            margin-right: 40px; /* 页面右侧的距离 */
+        }
+
+
+
+        .bottom-image {
+            max-width: 10%;
+            height: auto;
+            margin-top: 150px; /* 调整图片与上方内容的间距 */
+        }
+
+        a {
+            text-decoration: none; /* 去除下划线 */
+            color: inherit; /* 继承父元素的颜色 */
+            font-size: inherit; /* 继承父元素的字体大小 */
+            font-family: inherit; /* 继承父元素的字体族 */
+            /* 可以添加其他样式，以确保链接的样式一致 */
+        }
+    </style>   
+</head>
+<body>
+     <!-- 导航栏部分 -->
+    <div class="navbar">
+        <h1><a href="0.html">Carbon Footprint</a></h1>
+        <button><a href="1.html">首页</a></button>
+    </div>
+    
+
+    <button onclick="authorizeUsers()">Authorize Users</button>
+    <div id="authorizeOutput"></div>
+
+    <button onclick="checkAuthorizationStatus()">Check Authorization Status</button>
+    <div id="checkAuthorizationStatusOutput"></div>
+
+    
+    <!-- 添加活动类型 -->
+    <h2>Add Activity Type</h2>
+    <input type="text" id="activityType" placeholder="Activity Type">
+    <input type="number" id="emissionFactor" placeholder="Emission Factor (mg)">
+    <button id="addActivityType">Add Activity Type</button>
+    <div id="addActivityOutput"></div>
+
+    <!-- 记录活动 -->
+    <h2>Record Activity</h2>
+    <input type="text" id="recordActivityType" placeholder="Activity Type">
+    <input type="number" id="activityAmount" placeholder="Amount">
+    <button id="recordActivity">Record Activity</button>
+    <div id="recordActivityOutput"></div>
+
+    <h2>Set Reward Amount</h2>
+    <input type="number" id="newRewardAmount" placeholder="New Reward Amount">
+    <button id="setRewardAmount">Set Reward Amount</button>
+    <div id="setRewardAmountOutput"></div>
+
+
+    <!-- 查询信息 -->
+    <h1>Information Enquiry</h1>
+    <button id="getEmissions">Get Total Emissions</button>
+    <div id="emissionsOutput"></div>
+
+    <h3>Check Reward Amount</h3>
+    <button id="checkRewardAmount">Check Reward Amount</button>
+    <div id="rewardAmountOutput"></div>
+
+    <h3>Check User Emission</h3>
+    <input type="text" id="userAddress" placeholder="User Address">
+    <button id="checkEmission">Check Emission</button>
+    <div id="userEmissionOutput"></div>
+
+    <h3>Check All Users</h3>
+    <button id="getAllUsers">Get All Users</button>
+    <div id="allUsersOutput"></div>
+
+    <!-- 底部图片 -->
+    <img class="bottom-image" src=".\pic1.png" alt="描述图片的文字">
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="index1.js"></script>
+</body>
+</html>
